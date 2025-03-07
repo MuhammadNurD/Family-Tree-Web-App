@@ -1,0 +1,117 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Makes width and height calculations more intuitive */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+    /* Aligns content vertically */
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures background image covers the whole container */
+}
+
+/* Family Tree Container Styles */
+.family-tree-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    /* Ensures background is responsive */
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    /* Keeps content within bounds */
+    background-color: #33333317;
+    /* margin-right: 400px; */
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-left: 250px;
+}
+
+/* Styling the Tree with some extra padding */
+.tree-container {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 20px;
+    max-height: 600px;
+    /* Limits max height to avoid extreme stretching */
+    overflow: auto;
+    /* Allows scrolling if tree content overflows */
+}
+
+/* ReactD3Tree Styles - Optional Customization */
+.react-d3-tree-node {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.react-d3-tree-node:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+.react-d3-tree-links {
+    stroke: #ddd;
+    stroke-width: 2;
+}
+
+.react-d3-tree .node__circle {
+    fill: #6d9eeb;
+    stroke: #4a7cbb;
+    stroke-width: 3;
+}
+
+.react-d3-tree .node__circle:hover {
+    fill: #4a7cbb;
+    stroke: #6d9eeb;
+}
+
+.react-d3-tree .node__label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.react-d3-tree .node__label:hover {
+    color: #6d9eeb;
+}
