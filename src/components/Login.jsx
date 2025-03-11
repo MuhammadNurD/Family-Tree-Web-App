@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../../Family/public/css/Login.css";
+import "/public/css/Login.css";
 import { Footer } from "./Footer";
 
 const hardcodedUser = { username: "admin", password: "password123" };

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Login from "./components/Login";
-import FamilyTree from "./components/familyTree";
+import FamilyTree from "../src/pages/FamilyTree.jsx";
 import "./App.css";
 
 function App() {
