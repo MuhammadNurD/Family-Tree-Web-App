@@ -19,24 +19,28 @@ const Login = ({ onLogin }) => {
 
     return (
         <div className="login-page">
+            
             <div className="login-container">
-                <img src="public/images/logo.png" alt="Logo" />
-                <h2>Welcome to the Abrahams Family Tree</h2>
+                <h2>Welcome to the [LastName] Family Tree</h2>
                 {error && <p className="error">{error}</p>}
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button onClick={handleLogin}>Login</button>
+                
+                <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button type="submit">Login</button>
+                </form>
             </div>
+
             <div className="footer">
                 <Footer />
             </div>
