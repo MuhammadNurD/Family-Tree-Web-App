@@ -31,18 +31,19 @@ const FamilyTree = () => {
     ]
   };
 
-  const containerStyles = {
-    width: '1200px',
-    height: '900px',
-  };
-
   return (
     <div className='backgroundImage'>
-      <div className='text' >
-        <h1>Welcome to the [Last Name] Family Tree.</h1>
-      </div>
-      <div className="family-tree-container" style={containerStyles}>
-        <ReactD3Tree data={familyData} style={{ backgroundColor: 'black ' }} orientation='landscape' zoomable='false' draggable='false'/>
+      <h1>Welcome to the [LastName] Tree.</h1>
+      <div className="family-tree-container">
+        <ReactD3Tree 
+          data={familyData} 
+          orientation='landscape'
+          translate={{ x: 400, y: 50 }}
+          collapsible={false}
+          zoomable={true}
+          zoom={0.7}
+          
+        />
       </div>
     </div>
   );
